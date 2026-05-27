@@ -1,4 +1,4 @@
-# Common helper functions and utilities
+import uuid
 
-def example_helper():
-    pass
+def generate_idempotency_key():
+    return str(uuid.uuid4())
