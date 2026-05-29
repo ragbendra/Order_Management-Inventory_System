@@ -7,7 +7,7 @@ from common.exceptions import InsufficientStockError
 def reserve_stock(product_id, qty):
     inventory = Inventory.objects.select_for_update().get(product_id=product_id)
     if inventory.available_qty < qty:
-        raise InsufficientStockError
+        raise InsufficientStockError()
     inventory.available_qty = F('available_qty') - qty
     inventory.reserved_qty = F('reserved_qty') + qty
     inventory.version = F('version') + 1
