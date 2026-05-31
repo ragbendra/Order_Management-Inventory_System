@@ -9,7 +9,7 @@ class WarehouseSerializer(serializers.ModelSerializer):
 class InventorySerializer(serializers.ModelSerializer):
     class Meta():
         model = Inventory
-        fields = ['available_qty', 'reserved_qty', 'low_stock_thresold']
+        fields = ['available_qty', 'reserved_qty', 'low_stock_threshold']
 
 class ProductSerializer(serializers.ModelSerializer):
     inventory = InventorySerializer(read_only=True)

@@ -24,8 +24,8 @@ urlpatterns = [
     path('api/products/', include('products.urls')),
     path('api/orders/', include('orders.urls')),
     path('api/payments/', include('payments.urls')),
-    path('api/invoices/', include('invoices.urls')),
-    path('api/notifications/', include('notifications.urls')),
+    # path('api/invoices/', include('invoices.urls')),
+    # path('api/notifications/', include('notifications.urls')),
 ]
 
 if settings.DEBUG:
